@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  >
+
+  <title>reveal.js</title>
+
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+  <!-- Theme used for syntax highlighted code -->
+  <link
+    rel="stylesheet"
+    href="plugin/highlight/monokai.css"
+    id="highlight-theme"
+  >
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>Application Logging Selection</h1>
+        <aside class="notes">
+          Hi I’m Jeremy Cheung and on behalf of the SRE Team, I am here to present on Application Logging Selection as an Inform 
+        </aside>
+		    <p>
+			    <small>
+				    <a href="mailto:Jeremy.Cheung@gatesfoundation.org">Jeremy Cheung</a> /
+				    <a href="http://gatesfoundation.org">Bill & Melinda Gates Foundation</a>
+			    </small>
+        </p>
+      </section>
+      <section>
+        <h1>Why are we talking about this?</h1>
+        <p>Problem / Opportunity</p>
+        <aside class="notes">
+        </aside>    
+      </section>
+      <section>
+				<div class="see-through">
+					<picture>
+						<img src="Operational_Capability.png">
+					</picture>
+				</div>
+			</section>
+      <section>
+        <h1>Objectives</h1>
+        <p>Inform</p>
+      </section>
+      <section>
+        <h1>How we do this today for applications</h1>
+        <p>Hidden Process</p>
+        <p>Confusing</p>
+      </section>
+      <section>
+        <h1>Can someone go get the logs?</h1>
+      </section>
+      <section>
+        <h1>POD - Logs UI Story</h1>
+      </section>
+      <section>
+        <h1></h1>
+      </section>
+      <section>
+        <h1>Current Landscape</h1>
+        <p>358 applications, 1208 servers, and 16 kubeclusters</p>
+      </section>
+      <section>
+        <h1>What do we do?</h1>
+      </section>
+      <section>
+        <div class="see-through">
+          <h1>SRE Team - Principles</h1>
+          <ol>
+            <li>Stop doing it</li>
+            <li>Simple is better</li>
+            <li>Automate the right thing</li>
+          </ol>
+        </div>
+      </section>
+      <section>
+        <div class="see-through">
+          <h1>Intended benefits</h1>
+          <p>Drive maximum impact through the reduction of incidents and outages</p>
+        </div>
+      </section>
+      <section>
+        <h1>What did we evaluate?</h1>
+      </section>
+      <section>
+        <h1>Monitoring / Logging in Industry</h1>
+        <p>Application logging and the ability to tie this to telemetry events is becoming key to being able to gain insight and solve problems quickly</p>
+      </section>
+      <section>
+        <h1>How did we evaulate?</h1>
+        <p></p>
+      </section>
+      <section>
+        <h1>SCOM</h1>
+        <p></p>
+      </section>
+      <section>
+        <h1>Azure Log Analytics / Workspace</h1>
+      </section>
+      <section>
+        <h1>New Relic - Logs</h1>
+      </section>
+      <section>
+        <h1>Splunk</h1>
+      </section>
+      <section>
+        <h1>Rollbar</h1>
+      </section>
+      <section>
+        <h1>Datadog</h1>
+      </section>
+      <section>
+        <h1>Next Steps</h1>
+        <ol>
+          <li>Deploy to all SRE services to continue experiment</li>
+          <li>Onboard a few teams interested to POC Datadog pending successful testing</li>
+          <li>Evaluate consolidation opportunities in the observability suite</li>
+          <li>Return to TRB with a proposed enterprise standard and approach to all Application and System Logging</li>
+        </ol>
+      </section>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+  // More info about initialization & config:
+  // - https://revealjs.com/initialization/
+  // - https://revealjs.com/config/
+  Reveal.initialize({
+    hash: true,
+
+    // Learn about plugins: https://revealjs.com/plugins/
+    plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+  });
+  </script>
+</body>
+</html>

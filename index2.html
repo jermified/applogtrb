@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Public Service Presentation</title>
+  <meta name="author" content="Andrew Morris">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent"
+  >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"
+  >
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/bmgf.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+  var link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.type = "text/css";
+  link.href = window.location.search.match(/print-pdf/gi)
+    ? "css/print/pdf.css"
+    : "css/print/paper.css";
+  document.getElementsByTagName("head")[0].appendChild(link);
+  </script>
+</head>
+
+<body>
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <section>
+        <div class="see-through">
+          <h1>Public Service Presentation - Decision</h1>
+          <p>Selected Technology - Cloudflare</p>
+          <p>
+            <small>
+              <a href="mailto:Andrew.Morris@gatesfoundation.org">Andrew Morris</a> /
+              <a
+                href="http://gatesfoundation.org"
+              >Bill & Melinda Gates Foundation</a>
+            </small>
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <img width="400" height="400" data-src="images/me.jpg">
+        <div class="see-through">
+          <h1>Andrew Morris</h1>
+          <p>Service Manager - Site Reliability Engineering</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="see-through">
+          <h1>Why are we talking about this?</h1>
+          <ul>
+            <li>We maintain multiple complex services that work together to present services to our users</li>
+            <li>Our operational overhead to configure and maintain these services is significant</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="see-through">
+          <h1>Objectives</h1>
+          <ul>
+            <li>Inform members of what technology and challenges are involved</li>
+            <li>Inform members on our testing and selection process</li>
+            <li>Approval to standardize on using Cloudflare as the primary provider for domain registrar, DNS, CDN, WAF, DDOS, and SSL termination services for the enterprise</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="see-through">
+          <h1>How big are we in this space?</h1>
+          <ol>
+            <li>Domains names - >350</li>
+            <li>Public DNS Records - >3700</li>
+            <li>Monthly Public DNS queries - >37 Billion</li>
+            <li>SSL Certificates - >300</li>
+          </ol>
+        </div>
+      </section>
+
+      <section>
+        <div class="see-through">
+          <h1>On-Prem Example - Unison Portal</h1>
+          <ol>
+            <li>Network Solutions - Domain Registrar</li>
+            <li>UltraDNS - Public DNS</li>
+            <li>On Prem AD - Internal DNS</li>
+            <li>F5 Load Balancer - WAF, SSL Termination</li>
+            <li>Venafi - SSL Certificate Management</li>
+            <li>Digicert - SSL Certificate provider</li>
+          </ol>
+        </div>
+      </section>
+
+      <section>
+        <div class="see-through">
+          <h1>Cloud Example - Portfolio Overview Dashboard</h1>
+          <ol>
+            <li>Network Solutions - Domain Registrar</li>
+            <li>UltraDNS - Public DNS</li>
+            <li>On Prem AD - Internal DNS</li>
+            <li>Azure - Verizon Content Delivery Network</li>
+            <li>Azure Application Gateway - SSL Termination</li>
+            <li>Azure - Load Balancer</li>
+            <li>Venafi - SSL Management</li>
+            <li>Digicert - SSL provider</li>
+          </ol>
+        </div>
+      </section>
+
+      <section>
+        <div class="see-through">
+          <h1>SRE Team - Principles</h1>
+          <ol>
+            <li>Stop doing it</li>
+            <li>Simple is better</li>
+            <li>Automate everything</li>
+          </ol>
+        </div>
+      </section>
+
+      <section>
+        <div class="see-through">
+          <h1>Intended benefits</h1>
+          <ul>
+            <li>Dramatic decrease in effort to standup and manage applications</li>
+            <li>Increased service uptime and performance</li>
+            <li>Increased visibility into application and client use</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="see-through">
+          <h1>What did we Evaluate?</h1>
+          <p>Edge Presentation</p>
+          <ul>
+            <li>Azure Options - Registrar, DNS, Frontdoor, CDN</li>
+            <li>CloudFlare - Registrar, DNS, CDN, SSL</li>
+            <li>Akamai Services - DNS, CDN, SSL</li>
+            <li>Fastly - CDN</li>
+            <li>AWS CloudFront & Route 53 - DNS, CDN</li>
+            <li>Google Cloud - DNS, CDN</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="see-through">
+          <h1>How did we evaluate?</h1>
+          <ul>
+            <li>Collected technical requirements</li>
+            <li>Built prototypes to get feedback</li>
+            <li>Measured value versus cost of predicted change</li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        data-background-size="contain"
+        data-background-image="images/waf2019.jpg"
+      ></section>
+
+      <section>
+        <div class="see-through">
+          <h1>Azure - Evaluation Outcome Summary</h1>
+          <p>Azure - Registrar, DNS, CDN, WAF, SSL</p>
+          <ul>
+            <li>Complex to manage, poorly integrated, mostly partner delivered, weak IAC support</li>
+            <li>DNS Registrar - Partner provided / slow to build</li>
+            <li>DNS Services - Not validated, lacking security</li>
+            <li>FrontDoor - Reliability issues over last 12 months</li>
+            <li>CDN - Semi partner provided / slow to build</li>
+            <li>WAF - Not mature or easy to manage at scale</li>
+            <li>SSL - Partner provided / slow to build</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="see-through">
+          <h1>Akamai - Evaluation Outcome Summary</h1>
+          <p>Akamai - DNS, CDN, WAF, and SSL</p>
+          <ul>
+            <li>Very complex to manage at scale, expensive, and optimized for single site support, but good IAC support</li>
+            <li>DNS Services - Robust</li>
+            <li>CDN (ION) - Best in class but complex to manage across multiple properties</li>
+            <li>WAF - Best in class</li>
+            <li>SSL - Partner provided / slow to build</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="see-through">
+          <h1>Cloudflare - Evaluation Outcome Summary</h1>
+          <p>Cloudflare - Registrar, DNS, CDN, WAF, SSL</p>
+          <ul>
+            <li>Cost effective, replaces the most services, best best IAC support</li>
+            <li>DNS Registrar - Can only be transferred after 60 days of ownership</li>
+            <li>DNS Services - Best in class</li>
+            <li>SSL - Provisions instantly</li>
+            <li>CDN - Easy to manage at scale</li>
+            <li>WAF - Easy to manage at scale</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="see-through">
+          <h1>Fastly, AWS, Google Cloud</h1>
+          <p>Missing compatible technical capabilities</p>
+          <ul>
+            <li>Fastly - Does not provide Domain Registrar or DNS services</li>
+            <li>Azure blocks integration between these services in AWS and Google Cloud</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="see-through">
+          <h1>Next Steps - Cloudflare</h1>
+          <ol>
+            <li>Start contracts process</li>
+            <li>Start migration of DNS from UltraDNS</li>
+            <li>Build out IAC examples for technical teams to use</li>
+            <li>Apply CDN and SSL termination service to applications via SSL life cycle process (Certificates last 1-2 years)</li>
+            <li>Migrate domain registrations via life cycle process (Domains normally renew every year)</li>
+          </ol>
+        </div>
+      </section>
+
+      <section>
+        <div class="see-through">
+          <h1>Questions?</h1>
+        </div>
+      </section>
+
+      <section>
+        <div class="see-through">
+          <h1>Thank you!</h1>
+        </div>
+      </section>
+
+      <section
+        data-background-size="contain"
+        data-background="https://media.giphy.com/media/NUwoRZzHc2Bws/giphy.gif"
+      ></section>
+
+      <section>
+        <h1>Rough Cost Comparison per year</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Current</th>
+              <th>Expected</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Domain Registration</td>
+              <td>Discovering</td>
+              <td>25% less</td>
+            </tr>
+            <tr>
+              <td>DNS</td>
+              <td>~$28,000</td>
+              <td>~$600</td>
+            </tr>
+            <tr>
+              <td>CDN</td>
+              <td>~$292,000</td>
+              <td>~$4,000</td>
+            </tr>
+            <tr>
+              <td>SSL Certificates</td>
+              <td>~$62,000</td>
+              <td>~$1,000</td>
+            </tr>
+            <tr>
+              <td>Total - Minus registrar costs</td>
+              <td>~$382,000</td>
+              <td>~$6600</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Cloudflare price matches domain registrar pricing with at least a 25% savings per year upon transfer</p>
+      </section>
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+  // More info https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    touch: true,
+
+    transition: "fade", // none/fade/slide/convex/concave/zoom
+
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+      {
+        src: "lib/js/classList.js",
+        condition: function() {
+          return !document.body.classList;
+        }
+      },
+      {
+        src: "plugin/markdown/marked.js",
+        condition: function() {
+          return !!document.querySelector("[data-markdown]");
+        }
+      },
+      {
+        src: "plugin/markdown/markdown.js",
+        condition: function() {
+          return !!document.querySelector("[data-markdown]");
+        }
+      },
+      {
+        src: "plugin/highlight/highlight.js",
+        async: true,
+        callback: function() {
+          hljs.initHighlightingOnLoad();
+        }
+      },
+      { src: "plugin/search/search.js", async: true },
+      { src: "plugin/zoom-js/zoom.js", async: true },
+      { src: "plugin/notes/notes.js", async: true }
+    ]
+  });
+  </script>
+</body>
+</html>
