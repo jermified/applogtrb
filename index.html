@@ -1,341 +1,151 @@
 <!doctype html>
 <html>
-
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  >
 
-	<title>reveal.js</title>
+  <title>reveal.js</title>
 
-	<link rel="stylesheet" href="dist/reset.css">
-	<link rel="stylesheet" href="dist/reveal.css">
-	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/black.css" id="theme">
 
-	<!-- Theme used for syntax highlighted code -->
-	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+  <!-- Theme used for syntax highlighted code -->
+  <link
+    rel="stylesheet"
+    href="plugin/highlight/monokai.css"
+    id="highlight-theme"
+  >
 </head>
 
 <body>
-	<div class="reveal">
-		<div class="slides">
-			<section>
-				<div class="see-through">
-					<h1>Application and System Logging - Decision</h1>
-					<p></p>
-					<p>
-						<small>
-							<a href="mailto:Jeremy.Cheung@gatesfoundation.org">Jeremy Cheung</a> /
-							<a href="http://gatesfoundation.org">Bill & Melinda Gates Foundation</a>
-						</small>
-					</p>
-				</div>
-			</section>
-
-			<section>
-				<!-- <img width="400" height="400" data-src="images/me.jpg"> -->
-				<div class="see-through">
-					<h1>Site Reliability Engineering</h1>
-					<ul>
-						<li> When you approach IT and its challenges with software engineering
-							principles </li>
-						<li> Bridges development and operations with focus and rigor on system
-							resilience, availability, performance, and capacity
-						</li>
-					</ul>
-				</div>
-			</section>
-
-			<section>
-				<!-- <img width="400" height="400" data-src="images/me.jpg"> -->
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>Application Logging Selection</h1>
+        <aside class="notes">
+          Hi I’m Jeremy Cheung and on behalf of the SRE Team, I am here to present on Application Logging Selection as an Inform 
+        </aside>
+		    <p>
+			    <small>
+				    <a href="mailto:Jeremy.Cheung@gatesfoundation.org">Jeremy Cheung</a> /
+				    <a href="http://gatesfoundation.org">Bill & Melinda Gates Foundation</a>
+			    </small>
+        </p>
+      </section>
+      <section>
+        <h1>Why are we talking about this?</h1>
+        <p>Problem / Opportunity</p>
+        <aside class="notes">
+        </aside>    
+      </section>
+      <section>
 				<div class="see-through">
 					<picture>
 						<img src="Operational_Capability.png">
 					</picture>
 				</div>
 			</section>
+      <section>
+        <h1>Objectives</h1>
+        <p>Inform</p>
+      </section>
+      <section>
+        <h1>How we do this today for applications</h1>
+        <p>Hidden Process</p>
+        <p>Confusing</p>
+      </section>
+      <section>
+        <h1>Can someone go get the logs?</h1>
+      </section>
+      <section>
+        <h1>POD - Logs UI Story</h1>
+      </section>
+      <section>
+        <h1></h1>
+      </section>
+      <section>
+        <h1>Current Landscape</h1>
+        <p>358 applications, 1208 servers, and 16 kubeclusters</p>
+      </section>
+      <section>
+        <h1>What do we do?</h1>
+      </section>
+      <section>
+        <div class="see-through">
+          <h1>SRE Team - Principles</h1>
+          <ol>
+            <li>Stop doing it</li>
+            <li>Simple is better</li>
+            <li>Automate the right thing</li>
+          </ol>
+        </div>
+      </section>
+      <section>
+        <div class="see-through">
+          <h1>Intended benefits</h1>
+          <p>Drive maximum impact through the reduction of incidents and outages</p>
+        </div>
+      </section>
+      <section>
+        <h1>What did we evaluate?</h1>
+      </section>
+      <section>
+        <h1>Monitoring / Logging in Industry</h1>
+        <p>Application logging and the ability to tie this to telemetry events is becoming key to being able to gain insight and solve problems quickly</p>
+      </section>
+      <section>
+        <h1>How did we evaulate?</h1>
+        <p></p>
+      </section>
+      <section>
+        <h1>SCOM</h1>
+        <p></p>
+      </section>
+      <section>
+        <h1>Azure Log Analytics / Workspace</h1>
+      </section>
+      <section>
+        <h1>New Relic - Logs</h1>
+      </section>
+      <section>
+        <h1>Splunk</h1>
+      </section>
+      <section>
+        <h1>Rollbar</h1>
+      </section>
+      <section>
+        <h1>Datadog</h1>
+      </section>
+      <section>
+        <h1>Next Steps</h1>
+        <ol>
+          <li>Deploy to all SRE services to continue experiment</li>
+          <li>Onboard a few teams interested to POC Datadog pending successful testing</li>
+          <li>Evaluate consolidation opportunities in the observability suite</li>
+          <li>Return to TRB with a proposed enterprise standard and approach to all Application and System Logging</li>
+        </ol>
+      </section>
+    </div>
+  </div>
 
-			<section>
-				<!-- <img width="400" height="400" data-src="images/me.jpg"> -->
-				<div class="see-through">
-					<h1>Meet the SRE Team!</h1>
-					<p>Service Owner - Albert Foster</p>
-					<p>Service Manager - Andrew Morris</p>
-					<p>Service Engineer - Sachi Williamson</p>
-					<p>Service Engineer - Jeremy Cheung</p>
-					<p>Service Engineer - Jamie Abellanosa</p>
-					<p>Service Engineer - Allan Bernardo</p>
-					<p>Service Engineer - Robert Lippens</p>
-				</div>
-			</section>
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+  // More info about initialization & config:
+  // - https://revealjs.com/initialization/
+  // - https://revealjs.com/config/
+  Reveal.initialize({
+    hash: true,
 
-			<section>
-				<div class="see-through">
-					<h1>Why Talk About This?</h1>
-					<ul>
-						<li>Maintain complex and interconnected services and need to pull meaningful information from
-							them</li>
-						<li>Our operational overhead to pull event logs from a specific application is significant
-						</li>
-						<li>Lack patterns to scale events and log collection for systems and application
-						</li>
-					</ul>
-				</div>
-			</section>
-
-			<section>
-				<div class="see-through">
-					<h1>Objectives</h1>
-					<ul>
-						<li>Inform members of what technology and challenges are involved</li>
-						<li>Inform members on our evaluation, testing and selection process</li>
-						<li>Approval to commence deployment of an Application and Systems Events Management Solution for
-							the
-							Enterprise</li>
-					</ul>
-				</div>
-			</section>
-
-			<section>
-				<div class="see-through">
-					<h1>What is Application and Systems Event management?</h1>
-					<p>A methodology and process to monitor, aggregate and make sense of disparate events that occur
-						through the IT Infrastructure and the Services within</p>
-				</div>
-			</section>
-
-			<section>
-				<div class="see-through">
-					<h1>Current landscape in what we support</h1>
-					<ol>
-						<li>Number of applications - > 358</li>
-						<li>Number of servers - > 1208
-						</li>
-						<li>Number of kubeclusters - > 16</li>
-					</ol>
-				</div>
-			</section>
-
-			<section>
-				<div class="see-through">
-					<h1>Use Case #1 - POD</h1>
-					<ol>
-						<li>ContainerLogs - activty and traffic for the kubecluster's containers</li>
-						<li>KubeEvents - systems events and error checking info for the kubecluster </li>
-						<li>KubeHealth - health state info kubernetes clusters and components</li>
-					</ol>
-				</div>
-			</section>
-
-			<section>
-				<div class="see-through">
-					<h1>Use Case #2 - Unison</h1>
-					<ol>
-						<li>SCOM - Event Log Collection</li>
-					</ol>
-				</div>
-			</section>
-
-			<section>
-				<div class="see-through">
-					<h1>SRE Team - Principles</h1>
-					<ol>
-						<li>Stop doing it
-						</li>
-						<li>Simple is better </li>
-						<li>Automate everything </li>
-					</ol>
-				</div>
-			</section>
-
-			<section>
-				<div class="see-through">
-					<h1>Intended benefit</h1>
-					<OL>
-						<LI>Drive maximum impact through reduction of incidents and outages
-							<UL>
-								<LI>Simple and clear instrumentation
-								<LI>Perscribed patterns to collect App and System Events
-								<LI>Improved investigations on answering WHY unplanned issues arise
-							</UL>
-					</OL>
-				</div>
-			</section>
-
-			<section>
-				<div class="see-through">
-					<h1>What did we Evaluate?</h1>
-					<p>5 Solutions</p>
-					<ul>
-						<li>Azure</li>
-						<li>New Relic</li>
-						<li>Splunk</li>
-						<li>Rollbar</li>
-						<li>Datadog</li>
-					</ul>
-				</div>
-			</section>
-
-			<section>
-				<div class="see-through">
-					<h1>How did we evaluate?</h1>
-					<ul>
-						<li>Collected technical requirements and use cases</li>
-						<li>Built prototypes to garner feedback</li>
-						<li>Measured and scored upon multiple criteria across the solutions</li>
-					</ul>
-				</div>
-			</section>
-
-			<section>
-				<div class="see-through">
-					<h1>Evalulation Criteria</h1>
-					<ul>
-						<li>Full SaaS Events and Logs Collection Platform</li>
-						<li>Easy to Use, Configure, and Loosely Coupled</li>
-						<li>Supports Application and System Logging Contexts</li>
-						<li>...and More</li>
-
-
-					</ul>
-				</div>
-			</section>
-			<!-- <section data-background-size="contain" data-background-image="images/waf2019.jpg"></section> -->
-
-			<section>
-				<div class="see-through">
-					<h1>Azure Evaluation</h1>
-					<ul>
-						<li>Pro: Supports System and Native Apps logging</li>
-						<li>Pro: Variety of ways to interact with the platform
-						</li>
-						<li>Con: Logging mediums not in parity between Azure hosted apps and the Log Analytics
-							Agent (MMA)</li>
-						<li>Con: Each agent holds its own unique configuration and makes it difficult to manage at scale
-						</li>
-						<li>Con: Logging platform serving as also "The Log Collector"
-						</li>
-					</ul>
-				</div>
-			</section>
-
-			<section>
-				<div class="see-through">
-					<h1>New Relic Evaluation</h1>
-					<ul>
-						<li>Pro: Supports System and Native Apps logging</li>
-						<li>Pro: Kubernetes instrumentation is a native integration</li>
-						<li>Pro: Supports basic tagging on data inputs/on ingest</li>
-						<li>Con: Logging capability is not as mature compared to other tools</li>
-						<li>Con: Requires more plugins/dependencies than other tools</li>
-					</ul>
-				</div>
-			</section>
-
-			<section>
-				<div class="see-through">
-					<h1>Splunk Evaluation</h1>
-					<ul>
-						<li>Pro: Supports System and Native Apps logging</li>
-						<li>Pro: Market Leader in Log Collection and Aggregation
-						</li>
-						<li>Con: Agent configuration is unwiedly and hard to setup</li>
-						<li>Con: Agent and data inputs config carry unique customization and become expensive to
-							maintain</li>
-
-					</ul>
-				</div>
-			</section>
-
-			<section>
-				<div class="see-through">
-					<h1>Rollbar Evaluation</h1>
-					<ul>
-						<li>Pro: Complimentary tool in nature to further enrich logging experience</li>
-						<li>Pro: Code traceback feature makes root cause id quick</li>
-						<li>Pro: Developed SDK for Salesforce Apex Apps</li>
-						<li>Con: Not intended for system level logging</li>
-					</ul>
-				</div>
-			</section>
-
-			<section>
-				<div class="see-through">
-					<h1>Datadog Evaluation</h1>
-					<ul>
-						<li>Pro: Supports System and Native Apps logging</li>
-						<li>Pro: Native apps logging is agentless!</li>
-						<li>Pro: Maturity in logging space</li>
-						<li>Pro: 400+ built-in integration, 55 are related to Azure</li>
-						<li>Con: Instrumentation for Kubernetes Logging carried more dependencies compared to other
-							solutions</li>
-					</ul>
-				</div>
-			</section>
-
-			<section>
-				<!-- <img width="400" height="400" data-src="images/me.jpg"> -->
-				<div class="see-through">
-					<picture>
-						<img src="datadog-logo-big.png">
-					</picture>
-				</div>
-			</section>
-
-			<section>
-				<div class="see-through">
-					<h1>Datadog - Cost</h1>
-					<p>Datadog - Price Structure</p>
-					<ul>
-						<li>(Fill In)</li>
-					</ul>
-				</div>
-			</section>
-
-			<section>
-				<div class="see-through">
-					<h1>Next Steps - Datadog</h1>
-					<ol>
-						<li>Start contracts process (Q1 2021)</li>
-						<li>Develop instrumentation and migration patterns for teams to adopt (Q1 2021)</li>
-						<li>Build out any applicable IAC examples for technical teams to use (Q1 2021)</li>
-						<li>Resource and ramp up Managed Service (Q2 2021)</li>
-						<li>Priortize and build back log to roll out deployments (Q2 2021)</li>
-					</ol>
-				</div>
-			</section>
-
-			<section>
-				<div class="see-through">
-					<h1>Questions?</h1>
-				</div>
-			</section>
-
-			<section>
-				<div class="see-through">
-					<h1>Thank you!</h1>
-				</div>
-			</section>
-
-			<section data-background-size="contain"
-				data-background="https://media.giphy.com/media/NUwoRZzHc2Bws/giphy.gif"></section>
-		</div>
-	</div>
-
-	<script src="dist/reveal.js"></script>
-	<script src="plugin/notes/notes.js"></script>
-	<script src="plugin/markdown/markdown.js"></script>
-	<script src="plugin/highlight/highlight.js"></script>
-	<script>
-		// More info about initialization & config:
-		// - https://revealjs.com/initialization/
-		// - https://revealjs.com/config/
-		Reveal.initialize({
-			hash: true,
-
-			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
-		});
-	</script>
+    // Learn about plugins: https://revealjs.com/plugins/
+    plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+  });
+  </script>
 </body>
-
 </html>
