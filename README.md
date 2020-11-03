@@ -3,30 +3,33 @@
 1. Introduction
    - Introduce Self and Team
 2. Why Are We Talking About This?
+
    - What Application Logging Is
      - Rendering of an application’s activity to store it
      - Activity data takes different forms
    - Why we need Logs
      - To review activity when an application doesn’t work as expected
-     - One of the first places we turn to for troubleshooting
-   - Engineers Challenges
-     - Not all apps are setup to log
-     - Having to SSH/login directly to a machine
-     - Configuring an app to log is not an easy matter
-     - Logs can be difficult to work with
+     - One of the first places we turn to for troubleshooting issues
+
 3. Business Capability Model
    - Tie into Information Technology
    - Delivers on larger Business Operational Capabilities
    - Supports Broader Mission Goals
 4. Objectives
-   - Inform
-     - Technologies and challenges
-     - Evaluation, testing and selection
-     - Next Steps on Datadog and how teams can engage
+   - Technologies and challenges invovled
+   - Evaluation, testing and selection
+   - Next Steps on Datadog and how teams can engage
 5. How we do this today
    - We log in different ways to different places (file system, database, cloud)
-   - Hidden and no well documented process
+   - Hidden and not well documented process
    - Confusing and hard to correlate data
+     - Engineers Challenges
+       - Configuring an app to log is not an easy matter
+       - Logs can be difficult to work with
+       - As a result, not all apps get logged
+       - Having to SSH/login directly to a machine
+   - Because of these difficulties, we don't do it well as we could
+   -
 6. Can someone go get the logs?
    - logs come into play during incidents and outages
      - “pressure cooker” situation
@@ -35,6 +38,8 @@
      - how to access logs
      - how to understand the logs
      - difficulties in using the logging platform
+   - All this leads to applications being down longer than they need to be
+   - Distracts us from making great impacts
 7. POD – logs UI Story
    - Describe POD and where the logs are stored
    - Pain Points
@@ -54,9 +59,10 @@
    - Applying Principles
      - Stop logging in different ways to different places
      - Introduce a simple, flexible and easy to use platform
-     - Codify and Document through Code
+     - Codify logging configuration
+     - Document through Code
 10. Intended Benefit
-    - Drive max impact through reducing incidents and outages
+    - Drive maximum impact through reducing incidents and outages
       - Collect logs more easily and quickly
       - Increase visibility on why issues occur
       - Faster time to insights on issues
@@ -68,10 +74,10 @@
     - Use cases and technical requirements
     - Prototypes
     - Scored on Evaluation Criteria
-    - General ease of use and UI experience
-    - Supports all logging scenarios
-    - Maturity states
-    - Automation friendly
+      - General ease of use and UI experience
+      - Supports all logging scenarios
+      - Maturity states
+      - Automation friendly
 13. SCOM
     - Tooling we use for monitoring
     - Built with the datacenter in mind
