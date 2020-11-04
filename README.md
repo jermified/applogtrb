@@ -29,7 +29,6 @@
        - As a result, not all apps get logged
        - Having to SSH/login directly to a machine
    - Because of these difficulties, we don't do it well as we could
-   -
 6. Can someone go get the logs?
    - logs come into play during incidents and outages
      - “pressure cooker” situation
